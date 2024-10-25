@@ -7,7 +7,9 @@ bash ./bin/setup.sh
 exit
 ```
 
-## Complete the Data Model Classes
+## Django application
+
+### Complete the Data Model Classes
 
 Add properites with desired attributes to each model in "models.py"
 
@@ -20,7 +22,7 @@ Check if you are ready to launch the application: `curl -s -o /dev/null -w "%{ht
 * -o /dev/null: to discard the output by sending it to /dev/null, which is a special file that discards all data written to it.
 * -w "%{http_code}": specifies a custom output format. 
 
-## Fix Each Page 
+### Fix Each Page 
 
 1. Complete the URL in "urls.py"
 
@@ -36,3 +38,21 @@ Check if you are ready to launch the application: `curl -s -o /dev/null -w "%{ht
 2. Complete the view in `views.py`  
 
 You can first use simple dictionary data to test functionality, which will be eventually replaced by deployed microservice url.
+
+### Admin
+
+Superuser: `python3 manage.py createsuperuser`
+
+## Deploy on IBM Kubernetes Services
+
+1. Setup the environment
+2. Replace with deployed microservice URLs.
+3. Make migrations
+4. Check if the app can run locally: `python3 manage.py runserver`
+5. Create a Dockerfile
+6. Build and push the image
+7. Create a deployment.yml
+8. `kubectl apply -f ./deployment.yml`  
+> Watch the pods: `kubectl get pods -w`
+
+9. Access the deployment from outside the cluster: `kubectl port-forward po/pod_id 8000:8000`
