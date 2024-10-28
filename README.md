@@ -12,15 +12,22 @@ Users will be able to perform the following actions on the site:
 
 Anonymous use cases:
 * The user visits the Django Website home page.
+<img src="./static/images/homepage.png" alt="homepage" width="400"/>
+
 * The Song page shows songs and lyrics.
+  
 * The Picture page shows pictures from past concerts.
+<img src="./static/images/photos.png" alt="photos" width="400"/>
+
 * The user can sign into the application.
+<img src="./static/images/login.png" alt="login" width="400"/>
 
 Signed in use cases:
 * The user can see their concerts.
 * The user can book a concert.
 * The user can delete their reservation.
-  
+<img src="./static/images/concerts.png" alt="concerts" width="400"/>  
+
 Admin use cases:
 * Admin can change the concert date.
 
