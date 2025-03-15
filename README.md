@@ -1,10 +1,8 @@
 # A Band Website using Django
 
-This project is to build a website for a band. 
+This project is to build a band management platform utilizing a hybrid Django-Flask architecture.
 
-This is the main Django application that connects to two microservices built with Flask: a [song management service](https://github.com/XintongWang4869/Back-End-Development-Songs) that supports CRUD operations with MongoDB, and a [picture service](https://github.com/XintongWang4869/Back-End-Development-Pictures) that provides RESTul APIs.
-
-This main application includes a Concert data model and utilizes the built-in User model, which can create tables and relationships with the Django migration tool. There are also controllers to implement business logic to send the appropriate data to the provided templates.
+This is the core Django application that handles concert scheduling and user authentication. It is integrated with two Flask microservices: a [song management service](https://github.com/XintongWang4869/Back-End-Development-Songs) that supports CRUD operations with MongoDB, and an [image management service](https://github.com/XintongWang4869/Back-End-Development-Pictures) that provides RESTful APIs.
 
 ## Demo
 
